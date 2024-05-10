@@ -75,7 +75,20 @@ const valiDateForm = (event) => {
     }
 
     if(isvalid){
+        allValues();
         form.submit();
     }
 }
+
+const allValues = () => {
+    const formData = {
+        name: nameInput.value,
+        phoneNumber: phoneNumberInput.value,
+        email: emailInput.value,
+        password: passwordInput.value,
+        confirmPassword: confirmPasswordInput.value
+    };
+    alert("I do not know how to send data in backed so till then it will be showed in alert!!\n" + JSON.stringify(formData));
+}
 form.addEventListener('submit', valiDateForm);
+form.addEventListener('submit', allValues);
