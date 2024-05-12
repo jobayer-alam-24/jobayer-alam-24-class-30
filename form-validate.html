@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Form + Event</title>
+    <style>
+                * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background: linear-gradient(to right bottom, #08AEEA, #2AF598);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.4;
+            display: flex;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 550px;
+            margin: 80px auto;
+            background-color: white;
+            padding: 30px 60px 50px 50px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.651) 0px 30px 90px;
+        }
+
+        #regis-main-form {
+            display: grid;
+            row-gap: 20px;
+        }
+        #regis-main-form div{
+            position: relative;
+        }
+        #regis-main-form label {
+            font-family: Tahoma, sans-serif;
+            display: inline-block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        #regis-main-form input {   
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px ridge rgba(16, 224, 196, 0.795);
+            font-size: 15px;
+            font-size: 1.2rem;
+            letter-spacing: 1.4;
+            border-radius: 5px;
+        }
+        .tick{
+            position: absolute;
+            background-color: rgb(69, 194, 146);
+            font-size: 1.1rem;
+            border-radius: 50%;
+            color: white;
+            padding: .3%;
+            left: 93%;
+            top: 52%;
+        }
+        .tick1, .tick2, .tick3, .tick4, .tick5{
+            display: none;
+        }
+        #regis-main-form input:focus {
+            box-shadow: rgba(16, 224, 196, 0.795) 0px 4px 12px;
+        }
+      
+        .container-form-title {
+            text-align: center;
+            padding: 25px;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .btn {
+            width: 50%;
+            margin: auto;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            background: linear-gradient(to right bottom, #08aeeade, #2af59ade);
+        }
+
+        .btn:hover {
+            box-shadow: #08AEEA 0px 4px 12px, #2AF598 0px 4px 12px;
+        }
+
+        .cs-btn {
+            text-align: center;
+            text-decoration: none;
+            font-size: larger;
+            color: blue;
+        }
+
+        .cs-btn:hover {
+            text-decoration: underline;
+            opacity: 0.9;
+        }
+        .shadow{
+            box-shadow: red 0px 4px 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="container-form-title">Sign up</h2>
+
+        <form action="#" method="post" enctype="multipart/form-data" id="regis-main-form">
+            <div>
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" autofocus required placeholder="Enter your full name..">
+        
+            </div>
+            <div>
+                <label for="p-number">Phone number</label>
+                <input type="text" name="p-number" id="p-number" required placeholder="Must be 11 character">
+            
+            </div>
+            <div>
+                <label for="mail">E-mail</label>
+                <input size="20" type="email" name="mail" id="mail" required placeholder="E-mail please...">
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass1" minlength="4" maxlength="20" required
+                    placeholder="Enter the security keys..">
+                
+            </div>
+            <div>
+                <label for="pass">Confirm Password</label>
+                <input type="password" name="pass" id="pass2" minlength="4" maxlength="20" required
+                    placeholder="Retype your password">
+                
+            </div>
+            <button type="submit" value="submit" class="btn">Submit</button>
+            <a href="#" class="cs-btn">Login here</a>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

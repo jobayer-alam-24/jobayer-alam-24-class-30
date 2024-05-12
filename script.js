@@ -92,3 +92,4 @@ const allValues = () => {
 }
 form.addEventListener('submit', valiDateForm);
 form.addEventListener('submit', allValues);
+// -----------------------------------------------------
