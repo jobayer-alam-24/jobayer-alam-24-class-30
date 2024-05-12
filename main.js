@@ -30,6 +30,11 @@ const sumation = () => {
         input2.style.border = "2px solid red";
         alert("Invalid Input!");
     }
+    else if(isNaN(val1) && isNaN(val2)){
+        input1.style.border = "2px solid red";
+        input2.style.border = "2px solid red";
+        alert("Invalid Input!");
+    }
     else {
         setTimeout(() => {
             let sum = val1 + val2;
